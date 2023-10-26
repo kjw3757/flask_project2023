@@ -26,7 +26,8 @@
     
     
     <section>
-        <form action="/submit_item" method="get">
+        
+        <form action="/submit_item_post" method="post">
     <div>
         <br><br>
         <label for = "name">Item name: </label>
@@ -49,11 +50,11 @@
         <label for="category"> Category: </label>
         <br>
         <select id="category" name:"category">
-            <option value="Clothes" selected></option>
+            <option value="Clothes" selected>Clothes</option>
             <option value="Beauty">Beauty</option>
             <option value="Books">Books</option>
             <option value="Furniture">Furniture</option>
-    <option value="Electornics"> Electronics </option>
+    <option value="Electronics"> Electronics </option>
     <option value="ETC"> ETC </option>
         </select><br><br>
         
@@ -79,6 +80,7 @@
         <input type="text" name="phone" id="phone"><br>
     </div>
 </form>
+        
 <form action="/submit_item_post" method="post">
     <div><br><br>
         <label for="name">Item name: </label>
