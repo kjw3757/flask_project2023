@@ -40,11 +40,21 @@ def reg_item_submit():
 
 @application.route("/submit_item_post", methods=['POST'])
 def reg_item_submit_post():
+<<<<<<< HEAD
     image_file = request.files["file"]
+=======
+    
+    image_file=request.files["file"]
+>>>>>>> a9345187ec02f7edeb216590e32401c70e6fa054
     image_file.save("static/images/{}".format(image_file.filename))
     data = request.form
     
     return render_template("submit_item_result.html", data=data, img_path="static/images/{}".format(image_file.filename))
 
+<<<<<<< HEAD
 if __name__ == "__main__":
     application.run(host='0.0.0.0', debug=True)
+=======
+if __name__=="__main__":
+    application.run(host='0.0.0.0', debug=True)
+>>>>>>> a9345187ec02f7edeb216590e32401c70e6fa054
