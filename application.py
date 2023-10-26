@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 import sys
 application = Flask(__name__)
 
@@ -38,9 +38,11 @@ def reg_item_submit():
     
 @application.route("/submit_item_post", methods=['POST'])
 def reg_item_submit_post():
+    data=request.form
+    return render_template("submit_item_result.html", data=data)
     
     image_file=request.files["file"]
-    image_file.save("static/images/{}".format(image_file_filename))
+    image_file.save("static/images/{}".format(image_file.filename))
     data=request.form
     
     return render_template("submit_item_result.html", data=data,
