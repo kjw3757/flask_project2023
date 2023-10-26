@@ -26,7 +26,8 @@
     
     
     <section>
-        <form action="/submit_item" method="get">
+        <!--VALUE=request.form.post("NAME")-->
+        <form action="/submit_item_post" method="post">
     <div>
         <br><br>
         <label for = "name">Item name: </label>
@@ -86,7 +87,7 @@
     </div>
 </form>
 
-<form method="post"enctype="nultipart/form-data" action="/submit_item_post">
+<form method="post"enctype="multipart/form-data" action="/submit_item_post">
     <div>
         <label for="img">Representative Image upload: </label>
         <input type="file" name="file" /><br><br>
