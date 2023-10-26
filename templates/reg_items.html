@@ -1,4 +1,32 @@
-<form action="/submit_item" method="get">
+{% block section %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='main.js') }}" defer></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar__logo">
+            <a href="">EwhaMarket</a>
+        </div>
+        <ul class="navbar__menu">
+            <li><a href="/list">List</a></li>
+            <li><a href="/review">Review</a></li>
+            <li><a href="/reg_items">Register Items</a></li>
+            <li><a href="/reg_reviews">Register Reviews</a></li>
+        </ul>
+        <a href="#" class="navbar__toogleBtn">
+            <i class="fas fa-bars"></i>
+        </a>
+    </nav>
+    
+    
+    <section>
+        <form action="/submit_item" method="get">
     <div>
         <br><br>
         <label for = "name">Item name: </label>
@@ -48,10 +76,9 @@
     </div>
     <div>
         <label for="phone">Phone : </label>
-        <input type="text" name="phone" id="phone"><br><br>
+        <input type="text" name="phone" id="phone"><br>
     </div>
 </form>
-
 <form action="/submit_item_post" method="post">
     <div><br><br>
         <label for="name">Item name: </label>
@@ -65,4 +92,7 @@
         <input type="file" name="file" /><br><br>
     </div>
 </form>
+    </section>
+</body>
+</html>
 {% endblock section %}

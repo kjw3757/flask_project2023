@@ -1,21 +1,7 @@
-/* 기본 브라우저 스타일 초기화 */
-body, h1, h2, p, ul, li, a {
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    list-style: none;
-}
-
-/* body에 배경 색상 적용 */
-body {
-    background-color: #f0f0f0;
-    font-family: Arial, sans-serif;
-}
-
 /* 네비게이션 바 스타일 지정 */
 .navbar {
-    background-color: #333;
-    color: #fff;
+    background-color: #006400; /* 배경색을 #006400으로 변경 */
+    color: #fff; /* 글자색을 흰색으로 변경 */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -44,28 +30,4 @@ body {
 
 .navbar__toogleBtn {
     display: none; /* 데스크톱에서 기본적으로 숨겨짐 */
-}
-
-/* 더 작은 화면을 위해 토글 버튼 표시하는 미디어 쿼리 */
-@media (max-width: 768px) {
-    .navbar__menu {
-        display: none;
-        flex-direction: column;
-        position: absolute;
-        top: 60px;
-        left: 20px;
-        background-color: #333;
-        padding: 10px;
-    }
-
-    .navbar__menu.active {
-        display: flex;
-    }
-
-    .navbar__toogleBtn {
-        display: block;
-        color: #fff;
-        font-size: 24px;
-        cursor: pointer;
-    }
 }
